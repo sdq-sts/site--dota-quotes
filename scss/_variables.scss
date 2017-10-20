@@ -1,0 +1,8 @@
+// variables
+$white: #fff;
+$mask: rgba(0, 0, 0, .8);
+
+// Breakpoints
+$desktop: new-breakpoint(max-width 1024px 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);

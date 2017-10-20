@@ -1,0 +1,38 @@
+.site-footer {
+  @include media($tablet) {
+    @include span-columns(4);
+    padding: $gutter / 2;
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+    padding: $gutter / 4;
+    padding-bottom: $gutter;
+  }
+
+  @include span-columns(4);
+  bottom: 0;
+  color: $white;
+  padding: $gutter;
+  position: fixed;
+  text-align: center;
+  z-index: 99;
+
+  .coded-by {
+    font-size: golden-ratio(8px,  1);
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: $gutter;
+  }
+
+  i {
+    font-size: golden-ratio(16px,  1);
+  }
+
+  a {
+    color: $white;
+  }
+}

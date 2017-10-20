@@ -1,0 +1,86 @@
+.hero {
+  @include media($tablet) {
+    @include span-columns(8);
+    padding: $gutter;
+  }
+  @include media($mobile) {
+    @include span-columns(4)
+  }
+  @include span-columns(8);
+  @include omega(1);
+  padding: $gutter * 2;
+  z-index: 99;
+}
+
+.sentence,
+.hero-name {
+  @include media($mobile) {
+    font-size: golden-ratio(12px, 1);
+  }
+  @include media($tablet) {
+    font-size: golden-ratio(16px, 1);
+  }
+  color: $white;
+  font-size: golden-ratio(22px, 1);
+}
+
+.sentence {
+  @include media($mobile) {
+    margin-bottom: $gutter / 2;
+    margin-top: $gutter;
+    font-size: 1.5em;
+  }
+  
+  @include media($tablet) {
+    margin-bottom: $gutter / 2;
+    margin-top: $gutter;
+    font-size: 2em;
+  }
+  
+  margin-bottom: $gutter / 4;
+  margin-top: $gutter / 2;
+  font-size: 3em;
+  letter-spacing: 1px;
+}
+
+.hero-name {
+  @include media($tablet) {
+    font-size: golden-ratio(10px, 1);
+  }
+  font-size: golden-ratio(14px, 1);
+  margin: $gutter * 2 0;
+  letter-spacing: 2px;
+}
+
+.get-quote,
+.get-sound,
+.twitter-share {
+  @include media($tablet) {
+    @include span-columns(2);
+  }
+  @include media($mobile) {
+    @include span-columns(1);
+  }
+  @include span-columns(2);
+  background: $white;
+  border-radius: 60px;
+  box-shadow: 0 0 2px $mask;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em 0;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.get-sound {
+  @include media($tablet) {
+    @include shift(3);
+  }
+  @include media($mobile) {
+    @include shift(2);
+  }
+  @include shift(6 of 12);
+}
